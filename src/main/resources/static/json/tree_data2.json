@@ -1,0 +1,43 @@
+[{
+	"id":1,
+	"text":"系统菜单树",
+	"children":[{
+		"id":11,
+		"text":"商品管理",
+		"state":"closed",
+		"children": [{
+			"id":111,
+			"text":"商品查看",
+			"url": "/book/list",
+			"attributes": {
+				"url": "/book/list"
+			}
+		},{
+			"id":112,
+			"text":"商品添加",
+			"url": "/book/add",
+			"attributes": {
+				"url": "/book/add"
+			}
+		}]
+	},{
+		"id":12,
+		"text":"用户管理",
+		"state":"closed",
+		"children":[{
+			"id":121,
+			"text":"用户列表"
+		},{
+			"id":122,
+			"text":"用户添加"
+		}]
+	},{
+		"id":16,
+		"text":"订单管理",
+		"state":"closed",
+		"children":[{
+			"text":"订单列表",
+			"iconCls":"icon-add"
+		}]
+	}]
+}]

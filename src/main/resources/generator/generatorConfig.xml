@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <properties resource="dbinfo.properties"/>
+    <context id="mytables" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="javaFileEncoding" value="UTF-8"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://172.16.89.176:3306/Book?userUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false"
+                        password="123456"
+                        userId="root"></jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.nhc.springboot.book.pojo" targetProject="./src/main/java">
+            <property name="enableSubPackage" value="false"/>
+            <property name="constructorBased" value="true"/>
+            <property name="trimStrings" value="true"/>
+            <property name="immutable" value="false"/>
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="mapper" targetProject="./src/main/resources">
+            <property name="enableSubPackage" value="false"/>
+        </sqlMapGenerator>
+        <javaClientGenerator targetPackage="com.nhc.springboot.book.dao" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+        <table tableName="book">
+            <!--<columnOverride column="book_id" javaType="String" property="bookid"></columnOverride>-->
+        </table>
+    </context>
+</generatorConfiguration>
